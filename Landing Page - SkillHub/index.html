@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillHub - Seu Primeiro Passo para o Mercado de Trabalho</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="brand-container">
+
+      <img src="img/logo-header.png" class="logo-img" alt="Logo SkillHub">
+
+      <div class="brand-name">Skill<span>Hub</span></div>
+
+    </div>
+
+    <nav>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#cursos">Trilhas de Cursos</a>
+      <a href="#vagas">Mapa de Vagas</a>
+      <a href="#" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Entrar</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1>Seu conhecimento abre portas. <span>Seu bairro tem a vaga.</span></h1>
+      <p>
+        O SkillHub é a plataforma gratuita de capacitação e empregabilidade feita para jovens de Curitiba. Aprenda com
+        cursos práticos e encontre vagas de Jovem Aprendiz e Estágio perto de você!
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-gold">🚀 Alguma coisa que eu vou colocar aq vey</a>
+        <a href="#como-funciona" class="btn btn-outline">🔍 Conhecer a Plataforma</a>
+      </div>
+    </div>
+
+    <div class="hero-logo-display">
+      <div class="logo-badge-wrapper">
+        <img src="img/logo-transp2.png" class="vector-logo" alt="Logo SkillHub">
+      </div>
+    </div>
+  </section>
+
+  <!-- CARROSSEL DE BANNERS -->
+  <section class="banners-section">
+
+    <div class="banner-carousel">
+
+      <!-- BANNER 1 -->
+      <div class="banner-slide active">
+        <img src="img/banner1.png" alt="Banner SkillHub 1">
+      </div>
+
+      <!-- BANNER 2 -->
+      <div class="banner-slide">
+        <img src="img/banner2.png" alt="Banner SkillHub 2">
+      </div>
+
+      <!-- BANNER 3 -->
+      <div class="banner-slide">
+        <img src="img/banner3.png" alt="Banner SkillHub 3">
+      </div>
+
+      <!-- SETA ESQUERDA -->
+      <button class="banner-arrow prev" onclick="mudarBanner(-1)">
+        &#10094;
+      </button>
+
+      <!-- SETA DIREITA -->
+      <button class="banner-arrow next" onclick="mudarBanner(1)">
+        &#10095;
+      </button>
+
+    </div>
+
+    <!-- BOLINHAS -->
+    <div class="banner-dots">
+
+      <button class="banner-dot active" onclick="irParaBanner(0)"></button>
+
+      <button class="banner-dot" onclick="irParaBanner(1)"></button>
+
+      <button class="banner-dot" onclick="irParaBanner(2)"></button>
+
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO EXPLICAÇÃO DO SITE -->
+  <section class="about-section" id="como-funciona">
+    <div class="section-title">
+      <h2>O que é o SkillHub?</h2>
+      <p>Combinamos qualificação profissional de alto nível com oportunidades reais nos bairros de Curitiba.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- CARD 1 -->
+      <div class="feature-card">
+        <div class="feature-icon">🎓</div>
+        <h3>Cursos Gratuitos em Trilhas</h3>
+        <p>Capacitação 100% gratuita com certificação por Badges e conexão com o mercado local.</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">🏅</div>
+        <h3>Badges no seu Currículo</h3>
+        <p>A cada curso concluído com nota igual ou superior a 70% no Quiz, você desbloqueia uma Badge Digital que
+          comprova suas habilidades para as empresas.</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">📍</div>
+        <h3>Mapa Geolocalizado de Vagas</h3>
+        <p>Encontre oportunidades de Aprendiz e Estágio perto de você (CIC, Boqueirão, Centro, Tatuquara). Candidaturas
+          sem complicação e com total segurança.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2026 SkillHub Curitiba - Plataforma de Capacitação Profissional. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="banner.js"></script>
+
+</body>
+
+</html>

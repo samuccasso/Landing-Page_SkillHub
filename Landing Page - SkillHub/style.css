@@ -1,0 +1,427 @@
+    :root {
+      /* Extraído diretamente da Logo da imagem */
+      --purple-dark: #3B1466;
+      --purple-main: #581C87;
+      --purple-accent: #7E22CE;
+      --purple-light: #A855F7;
+      --gold-main: #D97706;
+      --gold-accent: #F59E0B;
+      --gold-light: #FCD34D;
+
+      --bg-dark: #0F0919;
+      --card-bg: #1A102A;
+      --card-border: #2D1B47;
+      --text-main: #F9FAFB;
+      --text-muted: #C0B6D3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* --- CABEÇALHO --- */
+    header {
+      background: rgba(26, 16, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .logo-img {
+      width: 78px;
+      height: 78px;
+    }
+
+    .brand-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .brand-name span {
+      color: var(--gold-accent);
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--gold-light);
+    }
+
+    /* --- BOTÕES --- */
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-accent), var(--gold-main));
+      color: #0F0919;
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(245, 158, 11, 0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--purple-light);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: var(--purple-main);
+      border-color: var(--purple-main);
+    }
+
+    /* --- HERO SECTION (DESTAQUE) --- */
+    .hero-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      min-height: 80vh;
+    }
+
+    .hero-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-text h1 span {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* EMBLEMA CENTRAL DA LOGO NA HERO */
+    .hero-logo-display {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-badge-wrapper {
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(126, 34, 206, 0.3) 0%, rgba(15, 9, 25, 0) 70%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* SVG REPRODUZINDO OS ELEMENTOS DA LOGO FORNECIDA */
+    .vector-logo {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 10px 30px rgba(126, 34, 206, 0.4));
+    }
+
+    /* --- SEÇÃO "COMO FUNCIONA O SKILLHUB" --- */
+    .about-section {
+      background: var(--card-bg);
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+      padding: 5rem 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-title h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+    }
+
+    .features-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: var(--bg-dark);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--purple-accent);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(126, 34, 206, 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--gold-accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .feature-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* --- RODAPÉ --- */
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--card-border);
+    }
+
+    @media (max-width: 900px) {
+      .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-badge-wrapper {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+      }
+    }
+
+    /* =========================
+   CARROSSEL DE BANNERS
+========================= */
+
+    .banners-section {
+      width: 100%;
+      padding: 4rem 8%;
+      background: #fff;
+    }
+
+    .banner-carousel {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(59, 20, 102, 0.18);
+    }
+
+    .banner-slide {
+      display: none;
+      width: 100%;
+    }
+
+    .banner-slide.active {
+      display: block;
+    }
+
+    .banner-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* SETAS */
+
+    .banner-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 45px;
+      height: 45px;
+
+      border: none;
+      border-radius: 50%;
+
+      background: rgba(59, 20, 102, 0.85);
+      color: #FCD34D;
+
+      font-size: 24px;
+      font-weight: bold;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: 0.3s;
+    }
+
+    .banner-arrow:hover {
+      background: #F59E0B;
+      color: #3B1466;
+    }
+
+    .banner-arrow.prev {
+      left: 20px;
+    }
+
+    .banner-arrow.next {
+      right: 20px;
+    }
+
+    /* BOLINHAS */
+
+    .banner-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 18px;
+    }
+
+    .banner-dot {
+      width: 11px;
+      height: 11px;
+
+      padding: 0;
+
+      border: none;
+      border-radius: 50%;
+
+      background: #d8c9e8;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .banner-dot.active {
+      width: 28px;
+      border-radius: 10px;
+      background: #3B1466;
+    }
+
+    .banner-dot:hover {
+      background: #F59E0B;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 768px) {
+
+      .banners-section {
+        padding: 2.5rem 5%;
+      }
+
+      .banner-carousel {
+        border-radius: 14px;
+      }
+
+      .banner-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+      }
+
+      .banner-arrow.prev {
+        left: 10px;
+      }
+
+      .banner-arrow.next {
+        right: 10px;
+      }
+
+    }
